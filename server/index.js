@@ -41,8 +41,8 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-// Handle OPTIONS preflight for all routes explicitly
-app.options('*', cors(corsOptions));
+// Handle OPTIONS preflight for all routes explicitly (use (.*) — * is invalid in path-to-regexp v8+)
+app.options('/(.*)', cors(corsOptions));
 app.use(express.json());
 
 const mongoose = require('mongoose');
