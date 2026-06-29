@@ -30,6 +30,8 @@ const corsOptions = {
     if (!origin) return callback(null, true);
     // Allow any Vercel preview/branch deployment for this project
     if (origin.endsWith('.vercel.app')) return callback(null, true);
+    // Allow any Render deployment for this project
+    if (origin.endsWith('.onrender.com')) return callback(null, true);
     if (allowedOrigins.includes(origin)) return callback(null, true);
     callback(new Error(`CORS: Origin ${origin} not allowed`));
   },
