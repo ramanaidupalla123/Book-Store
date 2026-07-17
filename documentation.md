@@ -216,18 +216,12 @@ npm run dev
 
 ---
 
-## 11. Screenshots & Drive Link
+## 11. Screenshots
 
-* **Demo Video & Screenshots Drive Link**: [Google Drive Folder Link](https://drive.google.com/drive/folders/1hORJ11561rBsZBxxFH1a3c4GGZ0JgF6y)
-* **Seeded Verification Logs**:
-  ```
-  MongoDB Connected: ac-6mn6yfz-shard-00-00.ouo6cb6.mongodb.net
-  Admins found: 1 (Abhi)
-  Sellers found: 2 (Pravanshu - Approved, John Doe - Pending)
-  Users found: 3 (Ram, Akash, Siya)
-  Books found: 6 (The Alchemist, Atomic Habits, Rich Dad Poor Dad, etc.)
-  Orders found: 2 (Ram order - ontheway, Akash order - ontheway)
-  ```
+* **Live Project Demo Link**: [Render Web Service URL](https://book-store-nzxy.onrender.com/)
+* **Screenshots Showcase**:
+  ![UI collage of BookVerse](media__1784313810271.png)
+  *Figure 1: UI collage of the BookVerse application showcasing the Landing page, Seller catalog, Add Book form, Seller Orders, and Seller Dashboard.*
 
 ---
 
