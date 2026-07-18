@@ -81,6 +81,7 @@ const buildBrainstormingPDF = () => {
 
     // Position Y-cursor below table
     doc.y = tableTop + rowHeight * 3 + 25;
+    doc.x = 55; // Reset X-cursor back to the left margin!
   };
 
   const addCenteredParagraph = (text) => {
