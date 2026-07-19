@@ -17,6 +17,12 @@ const LoginRegister = () => {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
+    if (role === 'admin') {
+      setIsLogin(true);
+    }
+  }, [role]);
+
+  useEffect(() => {
     // If user is already logged in, redirect them to their home page
     if (user) {
       if (user.role === 'user') navigate('/user-home');
@@ -128,23 +134,25 @@ const LoginRegister = () => {
           </button>
         </form>
 
-        <div className="text-center mt-3">
-          {isLogin ? (
-            <p className="mb-0 text-muted" style={{ fontSize: '0.95rem' }}>
-              {role === 'user' ? "Don't have an account? Create " : "Don't have an account? "}
-              <span onClick={toggleMode} className="text-danger fw-bold cursor-pointer" style={{ cursor: 'pointer', textDecoration: 'underline' }}>
-                Signup
-              </span>
-            </p>
-          ) : (
-            <p className="mb-0 text-muted" style={{ fontSize: '0.95rem' }}>
-              Already have an account?{' '}
-              <span onClick={toggleMode} className="text-danger fw-bold cursor-pointer" style={{ cursor: 'pointer', textDecoration: 'underline' }}>
-                Login
-              </span>
-            </p>
-          )}
-        </div>
+        {role !== 'admin' && (
+          <div className="text-center mt-3">
+            {isLogin ? (
+              <p className="mb-0 text-muted" style={{ fontSize: '0.95rem' }}>
+                {role === 'user' ? "Don't have an account? Create " : "Don't have an account? "}
+                <span onClick={toggleMode} className="text-danger fw-bold cursor-pointer" style={{ cursor: 'pointer', textDecoration: 'underline' }}>
+                  Signup
+                </span>
+              </p>
+            ) : (
+              <p className="mb-0 text-muted" style={{ fontSize: '0.95rem' }}>
+                Already have an account?{' '}
+                <span onClick={toggleMode} className="text-danger fw-bold cursor-pointer" style={{ cursor: 'pointer', textDecoration: 'underline' }}>
+                  Login
+                </span>
+              </p>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
